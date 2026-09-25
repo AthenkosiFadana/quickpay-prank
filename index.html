@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Payment Request</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card" id="card">
+      <div class="brand">
+        <div class="logo">₽</div>
+        <div>
+          <strong>QuickPay</strong>
+          <small>Secure Payments</small>
+        </div>
+      </div>
+
+      <div class="status">● PAYMENT REQUEST RECEIVED</div>
+
+      <h1>Funds are almost ready.</h1>
+      <p class="muted">Your financial assistance request has been received and is awaiting final confirmation.</p>
+
+      <div class="amount-box">
+        <span>Requested amount</span>
+        <strong>R 500.00</strong>
+      </div>
+
+      <div class="details">
+        <div><span>Reference</span><b>QP-<span id="ref"></span></b></div>
+        <div><span>Status</span><b class="pending">Pending</b></div>
+        <div><span>Processing fee</span><b>R 0.00</b></div>
+      </div>
+
+      <button id="releaseBtn">Release Funds</button>
+      <p class="tiny">Secure connection • No payment details required</p>
+    </section>
+
+    <section class="reveal hidden" id="reveal">
+      <div class="emoji">😂</div>
+      <h2>TRANSACTION DECLINED</h2>
+      <p class="reason">The Finance Department has reviewed your request.</p>
+
+      <div class="fake-alert">
+        <strong>Reason for rejection:</strong><br>
+        Applicant has failed to provide the required
+        <b>10kg of KFC</b> and a written motivation explaining why they deserve the money. 😭
+      </div>
+
+      <div class="meter">
+        <div id="bar"></div>
+      </div>
+      <p id="processing">Reversing transaction...</p>
+
+      <button class="again" id="againBtn">Try Again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
